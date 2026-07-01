@@ -20,4 +20,4 @@ vim.keymap.set("n", "<leader>ci", function()
     require("chatgpt").ChatGPTInteractive()
 end, { noremap = true, silent = true })
 
-
+vim.keymap.set('n', '<leader>r', ':w<CR>:!python3 %<CR>', { desc = 'Run Python file' })
