@@ -12,7 +12,7 @@
 |-----|------|--------|
 | `jk` or `kj` | Insert | Exit insert mode (Escape) |
 | `<leader>e` | Normal | Toggle file explorer (NvimTree) |
-| `<leader>r` | Normal | Save and run current Python file |
+| `<leader>r` | Normal | Save and run current Python file in a floating terminal popup |
 
 ### Telescope (Fuzzy Finder)
 
@@ -55,6 +55,17 @@
 | `<CR>` | Insert/Select | Confirm selected completion item |
 | `<C-Space>` | Insert | Manually trigger completion menu |
 | `<C-e>` | Insert/Select | Exit current snippet |
+
+---
+
+## Python Runner (`<leader>r`)
+
+Saves the current file and runs it in a centered floating terminal.
+
+- **Interpreter resolution order:** `$VIRTUAL_ENV` (if a venv is active) → nearest `.venv/` or `venv/` directory found by walking up from the file → `python3`/`python` on `PATH`.
+- Popup title shows `(venv)` when a virtualenv interpreter is used.
+- Close the popup with `q` or `Esc` (normal mode) or `Esc` (terminal mode).
+- Warns instead of running if the buffer isn't a `.py` file or no Python interpreter is found.
 
 ---
 
