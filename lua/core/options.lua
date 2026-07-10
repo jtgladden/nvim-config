@@ -17,5 +17,3 @@ vim.opt.showbreak = "↪ "
 
 vim.opt_local.spell = true
 vim.opt_local.spelllang = { "en_us" }   -- or "en", "en_gb", etc.
-
-
